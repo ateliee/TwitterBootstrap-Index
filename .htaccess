@@ -1,0 +1,21 @@
+
+<Files ~ "^(\.htaccess|\.htpasswd)$">
+deny from all
+</Files>
+
+#BASIC認証
+#AuthType Basic
+#AuthName "Input your ID and Password."
+#AuthUserFile /home/h-kouwa/www/.htpasswd
+#require valid-user
+
+DirectoryIndex index.html index.php .ht
+
+RewriteEngine on
+RewriteBase /
+#RewriteBase /test/
+#RewriteCond %{REQUEST_URI} /backup/index.php
+#RewriteRule .? - [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^history/(.*)$ ./history/index.php?%{QUERY_STRING} [L]
