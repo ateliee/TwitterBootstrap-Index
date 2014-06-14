@@ -1,4 +1,4 @@
-<?
+<?php
         // 文字コード設定
         mb_language('uni');
         mb_internal_encoding('UTF-8');

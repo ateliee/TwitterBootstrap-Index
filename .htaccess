@@ -3,16 +3,10 @@
 deny from all
 </Files>
 
-#BASIC認証
-#AuthType Basic
-#AuthName "Input your ID and Password."
-#AuthUserFile /home/h-kouwa/www/.htpasswd
-#require valid-user
-
-DirectoryIndex index.html index.php .ht
+DirectoryIndex index.html index.php
 
 RewriteEngine on
-RewriteBase /
+#RewriteBase /
 #RewriteBase /test/
 #RewriteCond %{REQUEST_URI} /backup/index.php
 #RewriteRule .? - [L]
